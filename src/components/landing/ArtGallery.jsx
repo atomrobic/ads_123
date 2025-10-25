@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import '../../styles/artgallery.css'; // Import the CSS file for styling
+import '../../styles/ArtGallery.css'; // Import the CSS file for styling
 
 const ArtGallery = () => {
   const [isOpen, setIsOpen] = useState(false);
