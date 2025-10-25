@@ -1,6 +1,6 @@
 import React from 'react';
 import { FadeInWhenVisible } from '../../utils/animation';
-import { helpers } from '../../utils/helpers';
+import helpers from '@/utils/helpers';
 import Card from '../commonui/ui/Card';
 import { carouselSlides as features } from '../../hooks/landingApi';
 

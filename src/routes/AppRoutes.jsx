@@ -1,4 +1,5 @@
-import LandingPage from "../pages/LandingPage";
+import React from "react";
+import LandingPage from "../pages/LandingPage.jsx";
 import AboutPage from "../pages/AboutPage";
 
 const AppRoutes = () => {

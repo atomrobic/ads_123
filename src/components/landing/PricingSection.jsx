@@ -1,6 +1,6 @@
 import React from 'react'
 import { FadeInWhenVisible } from '../../utils/animation';
-import { helpers } from '../../utils/helpers';
+import helpers from '@/utils/helpers';
 import Button from '../commonui/ui/Button';
 
 const PricingSection = () => {

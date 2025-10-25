@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import * as THREE from 'three';
 import { FadeInWhenVisible } from '../../utils/animation';
-import { helpers } from '../../utils/helpers';
+import helpers from '@/utils/helpers';
 import { testimonialsData as testimonials } from '../../hooks/landingApi';
 
 const Testimonials = () => {

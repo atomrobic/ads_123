@@ -1,10 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'), // ✅ Use @ as shortcut for /src
+    },
+  },
   server: {
-    allowedHosts: ['0024c1e6e9aa.ngrok-free.app'], // 👈 Add your ngrok domain here
-    host: true, // optional but recommended
+    allowedHosts: ['.ngrok-free.app'], // ✅ allows any ngrok subdomain
+    host: true, // ✅ makes dev server accessible from network
   },
 })
