@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FaGooglePlay, FaAndroid } from "react-icons/fa";
 
 const ArtGallery = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +38,16 @@ const ArtGallery = () => {
     setIsOpen(true);
   };
 
+  const downloadFromGooglePlay = () => {
+    // Add your Google Play store link here
+    window.open('https://play.google.com/store/apps/details?id=your.app.id', '_blank');
+  };
+
+  const downloadAPK = () => {
+    // Add your APK download link here
+    window.open('https://your-domain.com/your-app.apk', '_blank');
+  };
+
   return (
     <div className={`min-h-screen bg-black overflow-x-hidden ${isOpen ? 'overflow-hidden' : ''}`}>
       <main className="w-full">
@@ -64,14 +75,33 @@ const ArtGallery = () => {
               ))}
             </div>
 
-            {/* Explore Button */}
+            {/* Download Buttons */}
             {!isOpen && (
-              <button
-                onClick={enterFullview}
-                className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-br from-indigo-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wider shadow-lg shadow-indigo-500/40 transition-all duration-300 z-50 opacity-90 active:scale-95"
-              >
-                <span>Explore</span>
-              </button>
+              <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex flex-col gap-3 z-50 w-full max-w-md px-4">
+                {/* Google Play Button */}
+                <button
+                  onClick={downloadFromGooglePlay}
+                  className="w-full bg-gradient-to-br from-green-500 to-green-600 text-white px-6 py-4 rounded-xl font-semibold text-sm uppercase tracking-wider shadow-lg shadow-green-500/40 transition-all duration-300 opacity-90 active:scale-95 flex items-center justify-center gap-3"
+                >
+                  <FaGooglePlay className="text-xl" />
+                  <div className="text-left">
+                    <div className="text-xs font-normal">GET IT ON</div>
+                    <div className="text-lg font-bold">Google Play</div>
+                  </div>
+                </button>
+
+                {/* Android APK Button */}
+                <button
+                  onClick={downloadAPK}
+                  className="w-full bg-gradient-to-br from-gray-700 to-gray-800 text-white px-6 py-4 rounded-xl font-semibold text-sm uppercase tracking-wider shadow-lg shadow-gray-500/40 transition-all duration-300 opacity-90 active:scale-95 flex items-center justify-center gap-3"
+                >
+                  <FaAndroid className="text-xl" />
+                  <div className="text-left">
+                    <div className="text-xs font-normal">DOWNLOAD</div>
+                    <div className="text-lg font-bold">Android APK</div>
+                  </div>
+                </button>
+              </div>
             )}
           </section>
         )}
@@ -105,14 +135,33 @@ const ArtGallery = () => {
               className={`fixed inset-0 bg-black bg-opacity-95 z-50 transition-opacity duration-500 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
             />
 
-            {/* Explore Button */}
+            {/* Download Buttons */}
             {!isOpen && (
-              <button
-                onClick={enterFullview}
-                className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-gradient-to-br from-indigo-500 to-purple-600 text-white px-12 py-4 rounded-full font-semibold text-base uppercase tracking-wider shadow-lg shadow-indigo-500/40 transition-all duration-300 z-50 opacity-90 hover:opacity-100 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/60 active:translate-y-0"
-              >
-                <span>Explore</span>
-              </button>
+              <div className="fixed bottom-8 left-1/2 -translate-x-1/2 flex gap-4 z-50">
+                {/* Google Play Button */}
+                <button
+                  onClick={downloadFromGooglePlay}
+                  className="bg-gradient-to-br from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-sm uppercase tracking-wider shadow-lg shadow-green-500/40 transition-all duration-300 opacity-90 hover:opacity-100 hover:-translate-y-1 hover:shadow-xl hover:shadow-green-500/60 active:translate-y-0 flex items-center gap-3"
+                >
+                  <FaGooglePlay className="text-2xl" />
+                  <div className="text-left">
+                    <div className="text-xs font-normal">GET IT ON</div>
+                    <div className="text-lg font-bold">Google Play</div>
+                  </div>
+                </button>
+
+                {/* Android APK Button */}
+                <button
+                  onClick={downloadAPK}
+                  className="bg-gradient-to-br from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-sm uppercase tracking-wider shadow-lg shadow-gray-500/40 transition-all duration-300 opacity-90 hover:opacity-100 hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-500/60 active:translate-y-0 flex items-center gap-3"
+                >
+                  <FaAndroid className="text-2xl" />
+                  <div className="text-left">
+                    <div className="text-xs font-normal">DOWNLOAD</div>
+                    <div className="text-lg font-bold">Android APK</div>
+                  </div>
+                </button>
+              </div>
             )}
           </section>
         )}
