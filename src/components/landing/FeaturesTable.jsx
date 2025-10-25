@@ -16,7 +16,7 @@ const FeaturesTable = () => {
           playsInline
           className="w-full h-full object-cover opacity-90" // Low opacity (80%)
         >
-          <source src="src/assets/videos/SSYouTube.online_Coca-Cola® Masterpiece_1080p.mp4" type="video/mp4" />
+          <source src="public/videos/SSYouTube.online_Coca-Cola® Masterpiece_1080p.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Optional: Overlay to further control opacity/color tint */}
