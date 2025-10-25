@@ -5,7 +5,8 @@ import Testimonials from "../components/landing/Testimonials.jsx";
 import PricingSection from "../components/landing/PricingSection.jsx";
 import CTASection from "../components/landing/CTASection.jsx";
 import AuthForm from "../components/landing/Authform.jsx";  
-import FlipCard from "../components/landing/Flipcard.jsx";
+import ArtGallery from "../components/landing/ArtGallery.jsx";
+
 
 const LandingPage = () => {
   return (
@@ -13,7 +14,7 @@ const LandingPage = () => {
       <HeroSection />
       <FeaturesTable />
       <Testimonials />
-      <FlipCard />
+      <ArtGallery />
       <PricingSection />
       <AuthForm />
       <CTASection />
